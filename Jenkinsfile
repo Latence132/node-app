@@ -12,8 +12,8 @@ pipeline {
         }
         stage('Push Docker Image'){
             steps{
-                withCredentials([string(credentialsId: 'dockerhub-pass', variable: 'dockerhub-pass')]) {
-                    sh "docker login -u latence132 -p ${dockerhub-pass}"
+                withCredentials([string(credentialsId: 'dockerhub-pass', variable: 'dockerhubpass')]) {
+                    sh "docker login -u latence132 -p ${dockerhubpass}"
                     sh "docker push ${IMAGE_URL_WITH_TAG}"
                 }
             }
