@@ -4,7 +4,7 @@ metadata:
   name: nodeapp
 spec:
   selector:
-    app: nodeapp
+    app: node-app
   ports:
   - protocol: TCP
     port: 80
